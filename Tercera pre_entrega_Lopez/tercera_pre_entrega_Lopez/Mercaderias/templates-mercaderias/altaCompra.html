@@ -1,0 +1,15 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+  
+  <form action="{% url 'altaCompra' %}" method="POST">{% csrf_token %}
+
+    {{altaFormulario.as_p}}
+
+    <button type="submit"> Enviar </button>
+
+  </form>
+
+{% endblock contenidoQueCambia %}
